@@ -1,4 +1,4 @@
-package siilen;
+package siilen.problems;
 
 public class PalindromeNumber {
 

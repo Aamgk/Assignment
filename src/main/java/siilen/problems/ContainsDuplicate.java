@@ -1,4 +1,4 @@
-package siilen;
+package siilen.problems;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,5 +1,7 @@
 package siilen;
 
+import siilen.problems.*;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -25,8 +27,7 @@ public class Main {
         int[] nums = new int[nums_length];
         for (int i = 0; i < nums_length; i++){
             System.out.println("Enter the array elements: ");
-            int num = scan.nextInt();
-            nums[i] = num;
+            nums[i] = scan.nextInt();
         }
         System.out.println("Enter target: ");
         int target = scan.nextInt();
@@ -41,8 +42,7 @@ public class Main {
         int[] single_nums = new int[single_nums_length];
         for (int i = 0; i < single_nums_length; i++){
             System.out.println("Enter the array elements: ");
-            int Snum = scan.nextInt();
-            single_nums[i] = Snum;
+            single_nums[i] = scan.nextInt();
         }
         SingleNumber singleNumber = new SingleNumber();
         System.out.println("The single number: " + singleNumber.singleNumber(single_nums));
@@ -53,12 +53,43 @@ public class Main {
         int[] multi_nums = new int[multi_nums_length];
         for (int i = 0; i < multi_nums_length; i++){
             System.out.println("Enter the array elements: ");
-            int Mnum = scan.nextInt();
-            multi_nums[i] = Mnum;
+            multi_nums[i] = scan.nextInt();
         }
         ContainsDuplicate containsDuplicate = new ContainsDuplicate();
         System.out.println(containsDuplicate.containsDuplicate(multi_nums));
 
+        /*Search Insert Position*/
+        System.out.println("Enter the size of the array: ");
+        int search_position_length = scan.nextInt();
+        int[] search_position = new int[search_position_length];
+        for (int i = 0; i < search_position_length; i++){
+            System.out.println("Enter the array elements: ");
+            search_position[i] = scan.nextInt();
+        }
+        System.out.println("Enter the element to be searched: ");
+        int search_element = scan.nextInt();
+
+        SearchInsertPosition searchInsertPosition  = new SearchInsertPosition();
+        int result = searchInsertPosition.searchPosition(search_position, search_element);
+
+        if(result == -1){
+            System.out.println("Element not found");
+
+        } else {
+            System.out.println("The index of the element to be searched: " + result);
+        }
+
+        /*Maximum Subarray*/
+        System.out.println("Enter the size of the array");
+        int MSnum = scan.nextInt();
+        int[] MSarr = new int[MSnum];
+        System.out.println("Enter the elements of the array");
+        for (int i = 0; i < MSnum; i++) {
+            MSarr[i] = scan.nextInt();
+        }
+
+        MaximumSubarray maximumSubarray = new MaximumSubarray();
+        System.out.println(maximumSubarray.maxSubArray(MSarr));
         scan.close();
     }
 }
