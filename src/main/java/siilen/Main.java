@@ -90,6 +90,25 @@ public class Main {
 
         MaximumSubarray maximumSubarray = new MaximumSubarray();
         System.out.println(maximumSubarray.maxSubArray(MSarr));
+
+        /*Subsets*/
+        System.out.println("Enter the size of array");
+        int subN = scan.nextInt();
+        int[] subArr = new int[subN];
+        System.out.println("Enter the elements of array");
+        for (int i = 0; i < subN; i++) {
+            subArr[i] = scan.nextInt();
+        }
+        Subsets subset = new Subsets();
+        System.out.println(subset.subsets(subArr));
+
+        /*Valid Parenthesis*/
+        System.out.println("Enter the array: ");
+        String input = scan.nextLine();
+
+        ValidParentheses validParentheses = new ValidParentheses();
+        System.out.println(validParentheses.isValid(input));
+
         scan.close();
     }
 }
