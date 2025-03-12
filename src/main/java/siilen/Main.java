@@ -109,6 +109,12 @@ public class Main {
         ValidParentheses validParentheses = new ValidParentheses();
         System.out.println(validParentheses.isValid(input));
 
+        /*Longest Valid Parentheses*/
+        System.out.println("Enter the array of parentheses:");
+        String parentheses = scan.nextLine();
+
+        LongestValidParentheses LVP = new LongestValidParentheses();
+        System.out.println(LVP.longestValidParentheses(parentheses));
         scan.close();
     }
 }
